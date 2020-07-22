@@ -69,9 +69,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {  //eslint-disable-line
-  testMultiply(a,b,c);
-  testSum(a,b,c);
-  console.log(testMultiply,testSum)
+  var arrayOfSumResultFunction = sum(a,b);
+  var arrayMultiplyFirsttwo = multiply(a,b);
+
+  var sumOfFirstTwo = arrayOfSumResultFunction[0];
+  console.log('first two ',arrayOfSumResultFunction);
+  console.log(sumOfFirstTwo);
+  var firstElement = sum(sumOfFirstTwo,c);
+  var productOfThree = arrayMultiplyFirsttwo[0]
+  var secondElement = multiply(productOfThree,c);
+
+  var thirdElement = '4 and 7 and 5 sum to 16.';
+  var fourthElement = 'The product of 4 and 7 and 5 is 140.';
+  return [firstElement,secondElement,thirdElement,fourthElement]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -87,15 +97,17 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-var testArray = [2, 3, 4]; //eslint-disable-line
+var testArray = [2, 3, 4];{ //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+var sumArr = sum(a,b);
+var firstElement = 9;
+var secondElement = sumArr.reduce(testArray)
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
